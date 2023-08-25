@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在线报告验证系统</title>
+  <style>
+    #content {
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    #title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #body {
+      text-align: center;
+    }
+
+    #submit {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1 id="title">在线报告验证系统</h1>
+    <div id="body">
+      <input type="password" id="myInput" placeholder="请输入报告验证码" />
+      <button id="submit" onclick="MsgBox()">提交查询</button>
+    </div>
+  </div>
+
+  <script lang="javascript">
+    function MsgBox() {
+      var inputVal = document.getElementById("myInput").value;
+      if (inputVal === "A4BJ9BPVN7EF27DN") {
+        alert("报告验证码：A4BJ9BPVN7EF27DN\n此报告是第一次被查询，报告有效，验证成功！")
+      } else {
+        alert("验证失败，报告无效")
+      }
+    }
+  </script>
+</body>
+
+</html>
